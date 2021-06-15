@@ -2,9 +2,8 @@
 {   
     margin: 0;
     padding: 0;
-    max-height: max-content;
+    max-height: min-content;
     background-color: hsl(233, 47%, 7%);
-    font-size: 15px;
 }
 
 .container
@@ -13,35 +12,45 @@
     display: flex; 
     flex-direction: column;
     margin: 0rem 2rem;
-    margin-top: 5rem;
     height: 100%;
+    margin-top: 5rem;
     justify-content: center;
+    overflow: hidden;
+    
 }
+
+
+@media only screen and (max-width: 767px) 
+{   .imageHolder
+    {
+        background: hsl(277, 64%, 61%);
+        max-width: 100%;
+        max-height: 100%;
+    }  
+}     
 
 .image
 {
-  background-color: hsl(277, 64%, 61%);
-  opacity: 0.3;
+    opacity: 0.5;
+    max-width: 100%;
+
 }
 
-img
-{
-    z-index: 9;
-}
 .textContainer
 {
-    margin: 2rem;   
+    margin: 2rem; 
+    margin-left: 2rem;  
     background: transparent;
     display: flex;
     flex-direction: column;
-    
+    white-space: normal;
 }
 .textContainer h1
 {
     color: hsl(0, 0%, 100%);
     background: transparent;
     font-family: 'Inter', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 700px;
     padding: 1rem;
     text-align: center;
@@ -50,7 +59,7 @@ img
 .textContainer h1 mark
 {
     color: hsl(277, 64%, 61%);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 700px;
     background: none;
     
@@ -60,6 +69,7 @@ img
 {
     color: hsla(0, 0%, 100%, 0.75);
     background: transparent;
+    font-size: .85rem;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400px;
     padding: 0rem 1rem;
@@ -80,18 +90,96 @@ img
     display: block;
     margin-top: 1.6rem;
     font-size: 1.8rem;
-    font-weight: 700px;
+    font-weight: bolder;
 }
 
 .text
 {
     color: hsla(0, 0%, 100%, 0.75);
     font-family: 'Lexend Deca', sans-serif;
+    font-size: .8rem;
     font-weight: 400px;
+    text-transform: uppercase;
+    margin: 0rem 4rem;
+    font-stretch: 5rem;
 }
 
 .attribution
 {
     color: white;
     margin-bottom: 5rem;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px)
+{
+    .container
+    {
+        flex-direction: row-reverse;
+        margin: 0rem 6rem;
+        margin-top: 6rem;
+        height: 22rem;
+        width: 60rem;
+        position: absolute;
+    }
+    
+    .imageHolder
+    {
+        position: relative;
+        background: hsl(277, 64%, 61%);
+    }
+    .image
+    {
+        position: relative;
+        width: 100%;
+    }
+
+    .textContainer
+    {
+        display: block;
+        position: relative;
+        width: 50%;
+    }
+
+    .textContainer h1
+    {
+        text-align: left;
+    }
+
+    .textContainer p
+    {
+        text-align: left;
+    }
+
+    .bottomcontainer
+    {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3rem;
+    }
+    
+    .numText
+    {   
+        display: block;
+    }
+    .numbers
+    {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+
+    .text
+    {
+        display: inline;
+        font-size: 0.6rem;
+        font-weight: 100;
+        margin: 0rem;
+        font-stretch: 5rem;
+}
+    }
 }
