@@ -2,7 +2,6 @@
 {   
     margin: 0;
     padding: 0;
-    max-height: min-content;
     background-color: hsl(233, 47%, 7%);
 }
 
@@ -89,7 +88,7 @@
     font-family: 'Inter', sans-serif;
     display: block;
     margin-top: 1.6rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bolder;
 }
 
@@ -97,7 +96,7 @@
 {
     color: hsla(0, 0%, 100%, 0.75);
     font-family: 'Lexend Deca', sans-serif;
-    font-size: .8rem;
+    font-size: .75rem;
     font-weight: 400px;
     text-transform: uppercase;
     margin: 0rem 4rem;
@@ -107,24 +106,33 @@
 .attribution
 {
     color: white;
-    margin-bottom: 5rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    display: block;
 }
 
-a
+.attribution a
 {
     text-decoration: none;
+    color: white;
 }
 
 @media only screen and (min-width: 768px)
 {
+    *
+    {
+        position:static;
+    }
+
     .container
     {
         flex-direction: row-reverse;
-        margin: 0rem 6rem;
-        margin-top: 6rem;
+        margin:auto;
+        margin-top: 7rem;
         height: 22rem;
-        width: 60rem;
-        position: absolute;
+        width: 56rem;
+        position: relative;
     }
     
     .imageHolder
@@ -135,14 +143,16 @@ a
     .image
     {
         position: relative;
-        width: 100%;
+        width: 31rem;
+        height: 100%;
     }
 
     .textContainer
     {
         display: block;
         position: relative;
-        width: 50%;
+        width: 25rem;
+        margin-right: 7rem;
     }
 
     .textContainer h1
@@ -152,19 +162,29 @@ a
 
     .textContainer p
     {
+        font-size: .8rem;
         text-align: left;
+        text-align-last: left;
+        padding-right: 4rem;
+        word-spacing: .2rem;
+    }
+
+    .textContainer span
+    {
+        padding: 0rem;
     }
 
     .bottomcontainer
     {
         display: flex;
+        margin-top: 2.5rem;
         flex-direction: row;
-        margin-top: 3rem;
     }
     
     .numText
     {   
         display: block;
+        width: 6.3rem;
     }
     .numbers
     {
@@ -178,8 +198,11 @@ a
         display: inline;
         font-size: 0.6rem;
         font-weight: 100;
-        margin: 0rem;
         font-stretch: 5rem;
-}
+        margin: 0rem 0.1rem;
+    }
+    .attribution
+    {
+        margin-bottom: 6rem;
     }
 }
