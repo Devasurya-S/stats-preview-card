@@ -82,13 +82,7 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 767px)
-{
-    .numbers
-    {
-        margin-right: 1.5rem;
-    }
-}
+
 .numbers
 {
     color: hsl(0, 0%, 100%);
@@ -106,8 +100,20 @@
     font-size: .75rem;
     font-weight: 400px;
     text-transform: uppercase;
-    margin: 0rem 4rem;
     font-stretch: 5rem;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .text-center
+    {
+        margin-left: 2rem;
+    }
+
+    .text-center-1
+    {
+        margin-left: 1rem;
+    }
 }
 
 .attribution
